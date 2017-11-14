@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!--
+
+ * LPFM Player Boilerplate by Seth keiper (WFSN-LP 96.7FM)
+ *
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+
+-->
+<html>
+  <head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!--
+
+    FAVORITE ICONS!
+
+    You can use Inkscape, Photoshop, and/or GIMP to make your own.
+
+    -->
+
+
+    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="img/favicon.ico">
+    <!--[if IE]><link rel="shortcut icon" href="img/favicon.ico"><![endif]-->
+
+    <!-- The below are optional but encouraged -->
+
+    <!-- Touch icon for iOS 2.0+ and Android 2.1+: -->
+    <link rel="apple-touch-icon-precomposed" href="img/favicon-152.png">
+
+    <!-- The below are optional. -->
+
+    <!-- IE 10 Metro tile icon (Metro equivalent of apple-touch-icon): -->
+    <meta name="msapplication-TileColor" content="#5B6F0E">
+    <meta name="msapplication-TileImage" content="img/favicon-144.png">
+    <!-- IE 11 live tiles: -->
+    <meta name="msapplication-square70x70logo" content="img/favicon-70.png" />
+    <meta name="msapplication-square150x150logo" content="img/favicon-150.png" />
+    <meta name="msapplication-square310x310logo" content="img/favicon-310.png" />
+    <!-- For iPad with high-resolution Retina display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="img/favicon-152.png">
+    <!-- For iPad with high-resolution Retina display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicon-144.png">
+    <!-- For iPhone with high-resolution Retina display running iOS ≥ 7: -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="img/favicon-120.png">
+    <!-- For iPhone with high-resolution Retina display running iOS ≤ 6: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicon-114.png">
+    <!-- For first- and second-generation iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicon-72.png">
+    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+    <link rel="apple-touch-icon-precomposed" href="img/favicon-57.png">
+
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <link rel="stylesheet" type="text/css" href="css/pure/pure-min.css">
+    <link rel="stylesheet" type="text/css" href="css/pure/grids-responsive-min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>{stationFullName} Player</title>
+  </head>
+  <body>
+    <div id="playing-now-list-url" data-url="{playing_now_list_json}"></div>
+    <div id="debug-layer"></div>
+
+    <nav class="main-menu">
+      <div class="menu-button">
+        <a class="menu-btn-open" href="#"></a>
+      </div>
+    </nav>
+    <div class="menu-overlay">
+      <div class="menu-wrap">
+        <ul class="menu-wrap-nav">
+          <li><a id="radio-station-url" class="link-to-outside" href="#" data-href="http://radio.ucfsc.org">WFSN-LP Website <i class="fa fa-external-link-square" aria-hidden="true"></i></a></li>
+          <li><a id="organization-url" class="link-to-outside" href="#" data-href="http://ucfsc.org">UCFSC <i class="fa fa-external-link-square" aria-hidden="true"></i></a></li>
+          <li><a id="privacy-url" class="link-to-outside" href="#" data-href="http://radio.ucfsc.org/privacy/">Privacy Policy <i class="fa fa-external-link-square" aria-hidden="true"></i></a></li>
+        </ul>
+        <div class="menu-footer">
+          <p class="copyright">
+            Developed,
+            with
+            <span class="letter-l">l</span><span class="letter-o">o</span><span class="letter-v">v</span><span class="letter-e">e</span>, by<br>
+            the
+            <a class="link-to-outside" href="#" data-href="http://radio.ucfsc.org">WFSN-LP Radio DJs</a>.<br><br>
+            Full Source Code at
+            <a class="link-to-outside" href="#" data-href="https://github.com/erstazi/lpfm-player-boilerplate">GitHub</a>.<br><br>
+            &copy; <span class="copyright-year">2017</span> {stationFullName}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="applayer">
+      <div id="header-info">
+        <div class="logo"><img src="img/logo.png" alt="WFSN-LP" id="main-logo" class="logo"></div>
+        <h1>{stationFullName}</h1>
+        <h2 id="current-status" data-loading-text="Loading Stream..." data-almost-text="Almost There..." data-original="Union City's Radio">Union City's Radio</h2>
+      </div>
+
+
+      <div id="audioplayer-layer">
+        <audio id="audioplayer" controls volume="1.0" src="http://radio.ucfsc.org/stream" data-src="http://radio.ucfsc.org/stream" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+
+    <div class="applayer">
+      <div id="shows_info">
+        <h3>Current and Next Shows</h3>
+        <ul class="shows_info_list">
+          <li id="current_show_item" class="show_item">
+            <div class="pure-g">
+              <div class="pure-u-1-5 center"><i class="fa fa-arrow-circle-right show-avatar" aria-hidden="true"></i></div>
+              <div class="pure-u-4-5">
+                <div id="current_show_name" class="show_title"></div>
+                <div id="current_show_datetime" class="sub_title"></div>
+              </div>
+            </div>
+          </li>
+          <li id="next_show_item" class="show_item">
+            <div class="pure-g">
+              <div class="pure-u-1-5 center"><i class="fa fa-arrow-circle-right show-avatar" aria-hidden="true"></i></div>
+              <div class="pure-u-4-5">
+                <div id="next_show_name" class="show_title"></div>
+                <div id="next_show_datetime" class="sub_title"></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div id="audioplayer-controls">
+        <span class="play_or_pause items">
+          <a href="#" id="play-audio"><i class="fa fa-play-circle" aria-hidden="true"></i></a>
+          <a href="#" id="pause-audio"><i class="fa fa-pause-circle" aria-hidden="true"></i></a>
+        </span>
+        <span class="stop items">
+          <a href="#" id="stop-audio"><i class="fa fa-stop-circle" aria-hidden="true"></i></a>
+        </span>
+      </div>
+
+    </div>
+
+    <div id="connection-type"></div>
+
+    <dialog id="network-connection-null" class="dialog network-connection-null">
+      <h4 class="dialog__title">What? No Network!</h4>
+      <div class="dialog__content">
+        <p class="comment">Sorry, however right now, you don't have any network connection. Please, connect to either a WiFi network or your mobile network!</p>
+      </div>
+      <div class="dialog__actions">
+        <button type="button" class="pure-button pure-button-primary network-connection-null-close">OK</button>
+      </div>
+    </dialog>
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
+</html>

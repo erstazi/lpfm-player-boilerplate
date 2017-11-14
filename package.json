@@ -1,0 +1,21 @@
+{
+  "name": "lpfm-player-boilerplate",
+  "version": "1.0.0",
+  "description": "LPFM Stream Player Boilerplate is a Cordova project that provides an audio stream player.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erstazi/lpfm-player-boilerplate.git"
+  },
+  "homepage": "https://github.com/erstazi/lpfm-player-boilerplate",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova:template"
+  ],
+  "author": "Seth Keiper",
+  "license": "Apache-2.0"
+}
+

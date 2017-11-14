@@ -1,0 +1,18 @@
+{
+    "android": {
+        "debug": {
+            "keystore": "/full/path/to/yourApp.keystore",
+            "storePassword": "YOUR-PASSWORD-HERE",
+            "alias": "Your-App-Alias",
+            "password" : "YOUR-PASSWORD-HERE",
+            "keystoreType": ""
+        },
+        "release": {
+            "keystore": "/full/path/to/yourApp.keystore",
+            "storePassword": "YOUR-PASSWORD-HERE",
+            "alias": "Your-App-Alias",
+            "password" : "YOUR-PASSWORD-HERE",
+            "keystoreType": ""
+        }
+    }
+}
