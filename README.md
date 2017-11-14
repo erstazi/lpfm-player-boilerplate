@@ -13,7 +13,7 @@ Cordova command-line runs on Node.js and is available on NPM. Follow platform sp
 
 Create a blank Cordova project using the command-line tool. Example:
 
-`cordova create /home/username/projects/stationFullName com.YOURNAME.stationFullName "Your Station's Full Name"
+`cordova create /path/to/projects/stationFullName com.YOURNAME.stationFullName "Your Station's Full Name Stream Player" --template "https://github.com/erstazi/lpfm-player-boilerplate.git"`
 
 ## Changes you need to make:
 
