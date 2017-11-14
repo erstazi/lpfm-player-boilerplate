@@ -29,8 +29,8 @@ Create a blank Cordova project using the command-line tool. Example:
 
 1. In the `www/index.html` file, the element audio#audioplayer needs to have the following attributes to be changed:
 
-      * The attribute `src` in the element `audio#audioplayer` needs to be set to your stream URL. Replace `{streamURL}` with your stream URL.
-      * The attribute `data-src` in the element `audio#audioplayer` needs to be set to your stream URL. Replace `{streamURL}` with your stream URL. We use `data-src` as a backup for when we need to stop the player and it makes a cleaner break with the stream if we empty out `src` and reload the `src` with `data-src`
+  * The attribute `src` in the element `audio#audioplayer` needs to be set to your stream URL. Replace `{streamURL}` with your stream URL.
+  * The attribute `data-src` in the element `audio#audioplayer` needs to be set to your stream URL. Replace `{streamURL}` with your stream URL. We use `data-src` as a backup for when we need to stop the player and it makes a cleaner break with the stream if we empty out `src` and reload the `src` with `data-src`
 
 2. In the `package.json` file, you will need to change `{streamURL}` to your stream URL.
 
@@ -40,16 +40,16 @@ Create a blank Cordova project using the command-line tool. Example:
 
 The WFSN-LP images are examples that need to be replaced. We suggest you follow the [Cordova Customizing Icons Documentation](https://cordova.apache.org/docs/en/latest/config_ref/images.html)
 
-      * In the `css/index.css` file, you will find in the `body` the background-image `www/img/background.jpg` is the background image we use. You can just remove the background image completely in the CSS `body` element if you desire and choose a solid `background-color`
-      * In the `www/index.html` file, the element `img#main-logo` you will find `img/logo.png` which is the main logo image we use. You can adjust this
+  * In the `css/index.css` file, you will find in the `body` the background-image `www/img/background.jpg` is the background image we use. You can just remove the background image completely in the CSS `body` element if you desire and choose a solid `background-color`
+  * In the `www/index.html` file, the element `img#main-logo` you will find `img/logo.png` which is the main logo image we use. You can adjust this
 
 ### Changing some URLs to fit your organization
 
 In the `www/index.html` file, change the `a` link URLs in the following:
 
-      * In `a#radio-station-url`, change the URL to your Radio Station URL
-      * In `a#organization-url`, change the URL to your Organization URL. We have a parent nonprofit for our radio station so if you do not have a parent organization then you can remove this.
-      * In `a#privacy-url`, change the URL to your privacy agreement. All major app stores require this. You can mimic the [WFSN-LP Privacy agreement](http://radio.ucfsc.org/privacy/).
+  * In `a#radio-station-url`, change the URL to your Radio Station URL
+  * In `a#organization-url`, change the URL to your Organization URL. We have a parent nonprofit for our radio station so if you do not have a parent organization then you can remove this.
+  * In `a#privacy-url`, change the URL to your privacy agreement. All major app stores require this. You can mimic the [WFSN-LP Privacy agreement](http://radio.ucfsc.org/privacy/).
 
 ### Set your app's ID
 
