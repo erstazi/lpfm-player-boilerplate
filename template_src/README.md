@@ -95,3 +95,9 @@ or which ever platform you like to use.
 Now, you can development build:
 
 `cordova build android`
+
+We use Android devices hooked up through adb to test our apps.
+
+### Adding Keyfile
+
+Rename `testbuild.json` to `build.json`
