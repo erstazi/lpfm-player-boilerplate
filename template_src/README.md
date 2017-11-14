@@ -15,6 +15,14 @@ Create a blank Cordova project using the command-line tool. Example:
 
 `cordova create /path/to/projects/stationFullName com.YOURNAME.stationFullName "Your Station's Full Name Stream Player" --template "https://github.com/erstazi/lpfm-player-boilerplate.git"`
 
+Then
+
+`cd /path/to/projects/stationFullName`
+
+Then
+
+`cordova plugin add cordova-plugin-local-notification`
+
 ## Changes you need to make:
 
 ### Setting the Station Name
@@ -24,6 +32,11 @@ Create a blank Cordova project using the command-line tool. Example:
 2. In the `package.json` file, you will need to change `{stationFullName}` to your station's full name.
 
 3. In the `config.xml` file, you will need to change `{stationFullName}` to your stream URL.
+
+### Setting the Station Slogan:
+
+In `www/index.html` file, you will find `{stationSlogan}` and need to replace that.
+Example: Union City's Radio
 
 ### Setting your Stream URL:
 
@@ -77,3 +90,8 @@ or
 
 or which ever platform you like to use.
 
+### Time To Build
+
+Now, you can development build:
+
+`cordova build android`
