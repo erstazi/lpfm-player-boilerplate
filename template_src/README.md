@@ -42,6 +42,7 @@ The WFSN-LP images are examples that need to be replaced. We suggest you follow 
 
 * In the `css/index.css` file, you will find in the `body` the background-image `www/img/background.jpg` is the background image we use. You can just remove the background image completely in the CSS `body` element if you desire and choose a solid `background-color`
 * In the `www/index.html` file, the element `img#main-logo` you will find `img/logo.png` which is the main logo image we use. You can adjust this
+* In the `res/` directory, there are many images that you need to replicate so the icons can be displayed correctly. **If you use our images, then your application will be rejected on Google Play**
 
 ### Changing some URLs to fit your organization
 
@@ -55,6 +56,24 @@ In the `www/index.html` file, change the `a` link URLs in the following:
 
 Set your own apps ID. More information can be found on Wikipedia on [reverse domain name notations](https://en.wikipedia.org/wiki/Reverse_domain_name_notation).
 
+**This might already be set when you ran the `cordova create` command**
+
 1. In the `package.json` file, you will need to change `{ReverseDomainNameNotations}` to your own app ID. Example: `com.erstazi.wfsnlpplayer`
 
 2. In the `config.xml` file, you will need to change `{ReverseDomainNameNotations}` to your own app ID. Example: `com.erstazi.wfsnlpplayer`
+
+
+### Time To Add Some Platforms
+
+Now, you can `cd` into your directory that you have the template downloaded in (e.g. `/path/to/projects/stationFullName`).
+
+Then run:
+
+`cordova platform add android`
+
+or
+
+`cordova platform add ios`
+
+or which ever platform you like to use.
+
