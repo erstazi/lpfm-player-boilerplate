@@ -19,10 +19,6 @@ Then
 
 `cd /path/to/projects/stationFullName`
 
-Then
-
-`cordova plugin add cordova-plugin-local-notification`
-
 ## Changes you need to make:
 
 ### Setting the Station Name
