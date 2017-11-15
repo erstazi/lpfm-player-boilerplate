@@ -37,7 +37,7 @@
       "cordova-plugin-network-information": {},
       "cordova-plugin-statusbar": {},
       "nl.x-services.plugins.backgroundaudio": {},
-      "de.appplant.cordova.plugin.local-notification": {}
+      "cordova-plugin-local-notifications": {}
     },
     "platforms": [
       "android"
