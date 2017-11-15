@@ -98,6 +98,12 @@ Now, you can development build:
 
 We use Android devices hooked up through adb to test our apps.
 
-### Adding Keyfile
+### Adding Keystore
 
-Rename `testbuild.json` to `build.json`
+First read the [Android app signing requirements](https://developer.android.com/studio/publish/app-signing.html).
+
+Then, rename `testbuild.json` to `build.json`
+
+Make sure your keystore file is not in the same directory as your cordova project.
+
+More information is provided in the [Cordova guide for Android App Signing](https://cordova.apache.org/docs/en/latest/guide/platforms/android/#signing-an-app).
